@@ -1,26 +1,211 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <title>Welcome to My Website</title>
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMC Telecom × AWS Partnership</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .logo {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+            transition: transform 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: scale(1.1);
+        }
+        
+        .partnership-symbol {
+            font-size: 2rem;
+            color: #FFD700;
+            animation: pulse 2s infinite;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, #FFD700, #FFA500, #FF6B6B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+        
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+        
+        .floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+        
+        .floating-element {
+            position: absolute;
+            opacity: 0.1;
+            animation: float 6s ease-in-out infinite;
+        }
+        
+        .floating-element:nth-child(1) { top: 10%; left: 10%; animation-delay: 0s; }
+        .floating-element:nth-child(2) { top: 20%; right: 10%; animation-delay: 1s; }
+        .floating-element:nth-child(3) { bottom: 10%; left: 20%; animation-delay: 2s; }
+        .floating-element:nth-child(4) { bottom: 20%; right: 20%; animation-delay: 3s; }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes shimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.2); }
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            33% { transform: translateY(-20px) rotate(120deg); }
+            66% { transform: translateY(20px) rotate(240deg); }
+        }
+        
+        @media (max-width: 768px) {
+            h1 { font-size: 2rem; }
+            .logo { height: 60px; }
+            .container { margin: 20px; }
+        }
+    </style>
 </head>
 
 <body>
-    <h1 id="welcome" style="color: #6AE2F9;">Welcome to My Website 2025/05/29 Github deploy</h1>
-    <p>Thank you for visiting. Enjoy your stay!</p>
-
-    <form action="/api/login" method="POST">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <input type="button" value="Login" onclick="window.location.href='/learning'">
-        <input type="reset" value="Reset">
-    </form>
+    <div class="floating-elements">
+        <div class="floating-element">☁️</div>
+        <div class="floating-element">🚀</div>
+        <div class="floating-element">⚡</div>
+        <div class="floating-element">🌐</div>
+    </div>
+    
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS Logo" class="logo">
+            <div class="partnership-symbol">×</div>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/CMC_logo_2018.png/960px-CMC_logo_2018.png" alt="CMC Telecom Logo" class="logo">
+        </div>
+        
+        <h1 id="welcome">Welcome to CMC Telecom</h1>
+        <p class="subtitle">Powering Digital Transformation with AWS Cloud Solutions</p>
+        
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🛠️</div>
+                <h3>Managed Services</h3>
+                <p>Comprehensive IT infrastructure management and support</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">💳</div>
+                <h3>Billing Services</h3>
+                <p>Advanced billing solutions and payment processing</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🏗️</div>
+                <h3>Cloud Landing Zone</h3>
+                <p>Secure and scalable cloud foundation setup</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>Cloud Migration Service</h3>
+                <p>Seamless migration to AWS cloud infrastructure</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>Cloud Optimization</h3>
+                <p>Performance tuning and cost optimization</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎓</div>
+                <h3>Cloud Training & Workshop</h3>
+                <p>Professional AWS training and certification programs</p>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
-
-
